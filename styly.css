@@ -1,11 +1,54 @@
-*, 
+*,
 ::after,
 ::before {
   box-sizing: border-box;
-  background-attachment: fixed;
   color: #ffffff;
 }
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
+  background-attachment: fixed;
+}
+
+.main {
+  width: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 4.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_pic {
+  border-radius: 5px 5px 0 0;
+}
+
+.text_block {
+  background-color: #283e50;
+}
+
+.game_description {
+  padding: 0 10px 10px 10px;
+}
+
+.rules {
+  text-decoration: none;
+  background-color: #1fcca4;
+  border-bottom: 1.5px solid #283e50;
+  padding: 15px 0 15px 0;
+}
+
+.rules:hover {
+  background-color: #1cbb96;
+}
+
+.game_start {
+  text-decoration: none;
+  background-color: #0197f6;
+  padding: 15px 0 15px 0;
+}
+
+.game_start:hover {
+  background-color: #0090e9;
 }
