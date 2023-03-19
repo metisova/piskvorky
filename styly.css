@@ -1,0 +1,11 @@
+*, 
+::after,
+::before {
+  box-sizing: border-box;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+}
