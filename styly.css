@@ -48,6 +48,7 @@ h1 {
   padding: 20px 0 20px 0;
   background-color: #1fcca4;
   border-bottom: 1.5px solid #283e50;
+  color: #ffffff;
 }
 
 .rules:hover {
@@ -58,8 +59,104 @@ h1 {
   text-decoration: none;
   padding: 20px 0 20px 0;
   background-color: #0197f6;
+  color: #ffffff;
 }
 
 .game_start:hover {
   background-color: #0090e9;
+}
+
+/* Styles for hra.html*/
+
+.game_content {
+  max-width: 80vmin;
+  text-align: center;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player_info {
+  display: flex;
+
+}
+
+.player {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bolder;
+  padding-top: 2px;
+}
+
+.circle {
+  width: 26px;
+  border: 3px solid white;
+  border-radius: 50%; 
+  aspect-ratio: 1/1;background-color: transparent;
+  margin: auto;
+  margin-left: 8px;
+}
+
+.icons {
+  display: flex;
+}
+
+.house {
+  background-color: #1fcca4;
+  border: none;
+  border-radius: 3px;
+  padding: 6px;
+  margin: auto;
+  margin-right: 7px;
+
+}
+
+.house:hover {
+
+  background-color: #1cbb96;
+}
+
+.restart {
+  padding: 20px 0 20px 0;
+  background-color: #0197f6;
+  border: none;
+  border-radius: 3px;
+  padding: 6px;
+  margin: auto;
+  margin-right: 5px;
+}
+
+.restart.house:hover {
+  background-color: #0090e9;
+}
+
+.square_field {
+  width: 80vmin;
+  border: 1px solid rgb(14, 14, 14);
+  aspect-ratio: 1 / 1;
+}
+
+.square {
+  width: 10%;
+  float: left;
+  border: 1px solid rgb(22, 22, 22);
+  background-color: rgb(209, 189, 223);
+  opacity: 85%;
+  aspect-ratio: 1 / 1;cursor: pointer;
+}
+
+.square:hover {
+  transition: 0.2s;
+  background-color: rgb(243, 224, 255);
+  opacity: 85%;
+}
+
+.square:focus {
+  transition: 0.2s;
+  background-color: rgb(243, 224, 255);
+  opacity: 85%;
 }
