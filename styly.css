@@ -150,13 +150,59 @@ h1 {
 }
 
 .square:hover {
-  transition: 0.2s;
+  transition: 0.1s;
   background-color: rgb(243, 224, 255);
   opacity: 85%;
 }
 
 .square:focus {
-  transition: 0.2s;
+  transition: 0.1s;
   background-color: rgb(243, 224, 255);
   opacity: 85%;
+}
+
+/* Classes for a cross and a circle */
+
+.board__field--circle {
+  position: relative;
+  background-color: rgb(209, 189, 223);
+}
+
+.board__field--circle::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+  border-radius: 50%;
+  background-color: rgb(209, 189, 223);
+  border: 3px solid rgb(22, 22, 22);
+}
+
+.board__field--cross {
+  position: relative;
+  background-color: rgb(209, 189, 223);
+}
+
+.board__field--cross::before {
+  content: "";
+  width: 75%;
+  height: 3px;
+  background-color: rgb(22, 22, 22);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.board__field--cross::after {
+  content: "";
+  width: 75%;
+  height: 3px;
+  background-color: rgb(22, 22, 22);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
