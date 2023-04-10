@@ -190,7 +190,8 @@ h1 {
 
 /* Classes for a cross and a circle */
 
-.board__field--circle {
+.board__field--circle,
+.board__field--cross {
   position: relative;
   background-color: rgb(209, 189, 223);
 }
@@ -206,38 +207,27 @@ h1 {
   background-color: rgb(209, 189, 223);
   border: 3px solid rgb(22, 22, 22);
   transform-origin: center;
-  animation: growth 0.15s ease-out forwards;
+  animation: growth 0.15s;
 }
 
-.board__field--cross {
-  position: relative;
-  background-color: rgb(209, 189, 223);
-}
-
-.board__field--cross::before {
-  content: "";
-  width: 83%;
-  height: 3px;
-  background-color: rgb(22, 22, 22);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  transform-origin: center;
-  animation: growth 0.15s linear;
-}
-
+.board__field--cross::before,
 .board__field--cross::after {
   content: "";
   width: 83%;
+  top: 45.5%;
+  left: 8.5%;
   height: 3px;
   background-color: rgb(22, 22, 22);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  transform-origin: center;
-  animation: growth 0.15s linear;
+  animation: growth 0.15s;
+}
+
+.board__field--cross::before {
+  transform: rotate(45deg);
+}
+
+.board__field--cross::after {
+  transform: rotate(-45deg);
 }
 
 @keyframes growth {
@@ -248,4 +238,3 @@ h1 {
   to {
     transform: scale(1);
   }
-}
