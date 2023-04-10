@@ -95,8 +95,9 @@ h1 {
 .circle {
   width: 26px;
   border: 3px solid white;
-  border-radius: 50%; 
-  aspect-ratio: 1/1;background-color: transparent;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: transparent;
   margin: auto;
   margin-left: 8px;
 }
@@ -146,7 +147,8 @@ h1 {
   border: 1px solid rgb(22, 22, 22);
   background-color: rgb(209, 189, 223);
   opacity: 85%;
-  aspect-ratio: 1 / 1;cursor: pointer;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
 }
 
 .square:hover {
