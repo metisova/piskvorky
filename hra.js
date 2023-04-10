@@ -24,39 +24,39 @@ const confirmReload = (event) => {
 };
 
 document
-  .querySelector('button:nth-child(1)')
+  .querySelector('.square:nth-child(1)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(2)')
+  .querySelector('.square:nth-child(2)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(3)')
+  .querySelector('.square:nth-child(3)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(4)')
+  .querySelector('.square:nth-child(4)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(5)')
+  .querySelector('.square:nth-child(5)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(6)')
+  .querySelector('.square:nth-child(6)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(7)')
+  .querySelector('.square:nth-child(7)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(8)')
+  .querySelector('.square:nth-child(8)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(9)')
+  .querySelector('.square:nth-child(9)')
   .addEventListener('click', addClass);
 document
-  .querySelector('button:nth-child(10)')
+  .querySelector('.square:nth-child(10)')
   .addEventListener('click', addClass);
 
 
   document.querySelector('.restart').addEventListener('click', confirmReload);
 
 /*   document
-  .querySelectorAll('button:nth-child(-n+10)')
+  .querySelectorAll('.square:nth-child(-n+10)')
   .forEach(button => button.addEventListener('click', addClass)); */
