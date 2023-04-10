@@ -205,6 +205,8 @@ h1 {
   border-radius: 50%;
   background-color: rgb(209, 189, 223);
   border: 3px solid rgb(22, 22, 22);
+  transform-origin: center;
+  animation: growth 0.15s ease-out forwards;
 }
 
 .board__field--cross {
@@ -221,6 +223,8 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center;
+  animation: growth 0.15s linear;
 }
 
 .board__field--cross::after {
@@ -232,4 +236,16 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
+  transform-origin: center;
+  animation: growth 0.15s linear;
+}
+
+@keyframes growth {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
