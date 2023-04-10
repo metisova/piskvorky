@@ -15,6 +15,14 @@ const addClass = (event) => {
   }
 };
 
+const confirmReload = (event) => {
+  if (confirm('Opravdu chceš začít znovu?') === true) {
+    location.reload();
+  } else {
+    event.preventDefault();
+  }
+};
+
 document
   .querySelector('button:nth-child(1)')
   .addEventListener('click', addClass);
@@ -45,6 +53,9 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', addClass);
+
+
+  document.querySelector('.restart').addEventListener('click', confirmReload);
 
 /*   document
   .querySelectorAll('button:nth-child(-n+10)')
