@@ -33,17 +33,17 @@ const addClass = (event) => {
 
   if (winner === 'o') {
     setTimeout(() => {
-      alert('Vyhrálo kolečko ⭕️!');
+      alert('Vyhrálo kolečko!');
       location.reload();
     }, 250);
   } else if (winner === 'x') {
     setTimeout(() => {
-      alert('Vyhrál křížek ❌!');
+      alert('Vyhrál křížek!');
       location.reload();
     }, 250);
   } else if (winner === 'tie') {
     setTimeout(() => {
-      alert('Hra skončila nerozhodně 🤝.');
+      alert('Hra skončila nerozhodně.');
       location.reload();
     }, 250);
   }
