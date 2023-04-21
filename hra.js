@@ -28,6 +28,20 @@ const addClass = (event) => {
       return '_';
     }
   });
+
+  const winner = findWinner(squaresArray);
+
+  if (winner === 'o') {
+    setTimeout(() => {
+      alert('Vyhrálo kolečko ⭕️!');
+      location.reload();
+    });
+  } else if (winner === 'x') {
+    setTimeout(() => {
+      alert('Vyhrál křížek ❌!');
+      location.reload();
+    });
+  };
 };
 
 const confirmReload = (event) => {
