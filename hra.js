@@ -41,7 +41,12 @@ const addClass = (event) => {
       alert('Vyhrál křížek ❌!');
       location.reload();
     });
-  };
+  } else if (winner === 'tie') {
+    setTimeout(() => {
+      alert('Hra skončila nerozhodně 🤝.');
+      location.reload();
+    });
+  }
 };
 
 const confirmReload = (event) => {
