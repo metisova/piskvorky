@@ -47,18 +47,34 @@ const addClass = (event) => {
       location.reload();
     }, 250);
   }
+
+  if (currentPlayer === 'cross') {
+    fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        board: squaresArray,
+        player: 'x',
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const { x, y } = data.position;
+        const index = x + y * 10;
+        const field = squares[index];
+        field.click();
+      });
+  }
 };
 
-const confirmReload = (event) => {
+const confirmReload = () => {
   if (confirm('Opravdu chceš začít znovu?') === true) {
     location.reload();
-  } else {
-    event.preventDefault();
   }
 };
 
 document.querySelector('.restart').addEventListener('click', confirmReload);
 
-document
-  .querySelectorAll('.square')
-  .forEach((btn) => btn.addEventListener('click', addClass));
+squares.forEach((btn) => btn.addEventListener('click', addClass));
