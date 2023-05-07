@@ -49,6 +49,8 @@ const addClass = (event) => {
   }
 
   if (currentPlayer === 'cross') {
+    squares.forEach((btn) => (btn.disabled = true));
+
     fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
       method: 'POST',
       headers: {
@@ -66,6 +68,15 @@ const addClass = (event) => {
         const field = squares[index];
         field.click();
       });
+
+    squares.forEach((btn) => {
+      if (
+        !btn.classList.contains('board__field--circle') &&
+        !btn.classList.contains('board__field--cross')
+      ) {
+        btn.disabled = false;
+      }
+    });
   }
 };
 
